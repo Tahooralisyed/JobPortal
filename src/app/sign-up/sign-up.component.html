@@ -1,0 +1,75 @@
+<!-- <h1>
+  Students Page!
+</h1> -->
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <div class="col-sm-3"></div>
+<div class="col-sm-6">
+   
+  <div class="form-group">
+      <div class="form-group">
+          <label for="name">First Name:</label>
+          <input type="text" formControlName="firstName" class="form-control" placeholder="Enter First Name" required>
+      
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+  class="alert alert-danger">
+            <div *ngIf="firstName.errors.required">
+             First Name is required.
+            </div>
+            </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" formControlName="lastName" class="form-control" placeholder="Enter Last Name"  required>
+          
+          <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+          class="alert alert-danger">
+                    <div *ngIf="lastName.errors.required">
+                      Last Name is required.
+                    </div>
+                    </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <div class="form-group">
+          <label for="phoneNo">Phone No:</label>
+          <input type="number" formControlName="phoneNo" class="form-control"  placeholder="Enter Phone No"  required>
+          <div *ngIf="phoneNo.invalid && (phoneNo.dirty || phoneNo.touched)"
+          class="alert alert-danger">
+                    <div *ngIf="phoneNo.errors.required">
+                      Phone Number is required.
+                    </div>
+                    </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <div class="form-group">
+          <label for="emailId">Emai ld:</label>
+          <input type="text" formControlName="emailId" class="form-control"  placeholder="Enter emailId"  required>
+          <div *ngIf="emailId.invalid && (emailId.dirty || emailId.touched)"
+          class="alert alert-danger">
+                    <div *ngIf="emailId.errors.required">
+                      EmailId is required.
+                    </div>
+                    </div>
+        </div>
+  </div>
+  <div class="form-group">
+      <div class="form-group">
+          <label for="Password">PassWord:</label>
+          <input type="Password" formControlName="Password" class="form-control"  placeholder="Enter password"  required>
+          <div *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+          class="alert alert-danger">
+                    <div *ngIf="Password.errors.required">
+                      Password is required.
+                    </div>
+                    </div>
+        </div>
+  </div>
+  <button type="submit"  class="btn btn-info">Submit</button>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</form>

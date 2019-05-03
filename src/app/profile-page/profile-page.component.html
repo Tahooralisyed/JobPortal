@@ -1,0 +1,21 @@
+<div class="container">
+
+<table class="table">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Type</td>
+        <td>Scientific Name</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let data of Data">
+        <td>{{data.ID}}</td>
+        <td>{{data.Name}}</td>
+        <td>{{data.Type}}</td>
+        <td>{{data.ScientificName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
